@@ -71434,6 +71434,12 @@ definitions:
     description: |-
       Version defines the versioning scheme used to negotiate the IBC verison in
       the connection handshake.
+  user.user.MsgCreateUserResponse:
+    type: object
+    properties:
+      id:
+        type: string
+        format: uint64
   user.user.Params:
     type: object
     description: Params defines the parameters for the module.

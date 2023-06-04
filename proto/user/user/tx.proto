@@ -1,7 +1,19 @@
 syntax = "proto3";
+
 package user.user;
 
 option go_package = "user/x/user/types";
 
 // Msg defines the Msg service.
-service Msg {}
+service Msg {
+  rpc CreateUser (MsgCreateUser) returns (MsgCreateUserResponse);
+}
+message MsgCreateUser {
+  string name     = 2;
+  string password = 3;
+}
+
+message MsgCreateUserResponse {
+  uint64 id = 1;
+}
+
